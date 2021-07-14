@@ -17,7 +17,7 @@
 - Çalışanlar ile ilgili bilgiler "employees" tablosunda yer almaktadır.
 - Repository Patterns içerisinde sorgular yer almaktadır. (Employess ve FetchUrl Repository)
 - Commands klasörü altında yer alan FetchDataCommand ile terminalde <b><i>php artisan fetch:url</i></b> komutu ile tüm veriler getirilebilir.
-- Arayüzde Bootstrap5 CDN üzerinden entegre edilmiştir.
+- Arayüzde Bootstrap5, CDN üzerinden entegre edilmiştir.
 
 ## Sonuç
 
