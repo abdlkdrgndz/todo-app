@@ -7,8 +7,8 @@
 </p>
 
 ## Todo App
-- <i>php artisan migrate</i> komutu ile tabloları oluşturun. <b>dbname : todoapp</b>
-- <i>php artisan serve</i> komutu ile projeyi başlatın.
+- <i>php artisan migrate</i> komutu ile tabloları oluşturun. <b>dbname : todoapp</b> 
+- <i>php artisan serve</i> komutu ile projeyi başlatın. <b><i>./vendor/bin/sail up</i></b> veya <b><i>sail up</i></b> komutu ile Docker üzerinde deploy edebilirsiniz.
 
 ## Neler Var?
 
