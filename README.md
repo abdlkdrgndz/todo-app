@@ -20,4 +20,4 @@
 
 ## Sonuç
 
-<img src="https://i.ibb.co/Yk7nQ3f/output2.png" alt="output2">
+<img src="https://i.ibb.co/72z7M8D/output3.png" alt="output3">
