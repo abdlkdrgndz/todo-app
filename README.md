@@ -14,5 +14,6 @@
 
 - TodoController içerisinde öncelikle veritabanında "fetch_urls" tablosunda kayıtlı olan bağlantılardan tüm verileri çekip Cache içerisinde 30 dakika süre ile saklanır.
 - İlgili tüm methodlar TodoController içerisinde tanımlanmış olup her method üzerinde annotate tanımlanmıştır.
+- Çalışanlar ile ilgili bilgiler "employees" tablosunda yer almaktadır.
 - Repository Patterns içerisinde sorgular yer almaktadır. (Employess ve FetchUrl Repository)
 - Commands klasörü altında yer alan FetchDataCommand ile terminalde <i>php artisan fetch:url</i> komutu ile tüm veriler getirilebilir.
