@@ -8,11 +8,17 @@
 
 ## Todo App
 - <i>php artisan migrate</i> komutu ile tabloları oluşturun. <b>dbname : todoapp</b>
-- <i>php artisan serve</i> komutu ile projeyi başlatın. <b>./vendor/bin/sail up</b> komutu ile Docker üzerinde deploy edebilirsiniz.
+- <i>php artisan serve</i> komutu ile projeyi başlatın.
 
 ## Neler Var?
 
-- TodoController içerisinde öncelikle veritabanında "fetch_urls" tablosunda kayıtlı olan bağlantılardan tüm verileri çekip Cache içerisinde 30 dakika süre ile saklanır.
-- İlgili tüm methodlar TodoController içerisinde tanımlanmış olup her method üzerinde annotate tanımlanmıştır.
+- TodoController içerisinde öncelikle veritabanında "fetch_urls" tablosunda kayıtlı olan bağlantılardan HTTP Client ile tüm verileri çekip Cache içerisinde 30 dakika süre ile saklanır. 
+- İlgili tüm methodlar <b><i>TodoController</i></b> içerisinde tanımlanmış olup her method üzerinde annotate tanımlanmıştır.
+- Çalışanlar ile ilgili bilgiler "employees" tablosunda yer almaktadır.
 - Repository Patterns içerisinde sorgular yer almaktadır. (Employess ve FetchUrl Repository)
-- Commands klasörü altında yer alan FetchDataCommand ile terminalde <i>php artisan fetch:url</i> komutu ile tüm veriler getirilebilir.
+- Commands klasörü altında yer alan FetchDataCommand ile terminalde <b><i>php artisan fetch:url</i></b> komutu ile tüm veriler getirilebilir.
+- Arayüzde Bootstrap5, CDN üzerinden entegre edilmiştir.
+
+## Sonuç
+
+<img src="https://i.ibb.co/72z7M8D/output3.png" alt="output3">
