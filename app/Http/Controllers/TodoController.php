@@ -7,6 +7,7 @@ use App\Repositories\EmployeesRepository;
 use App\Repositories\FetchUrlRepository;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
+use Illuminate\View\View;
 
 class TodoController extends Controller
 {
@@ -17,7 +18,7 @@ class TodoController extends Controller
      * Veritabanı üzerindeki dinamik URL lerden tüm işleri çekelim. 30 dakika verileri önbellekte saklar.
      * @return array
      */
-    public static function fetchData()
+    public static function fetchData(): array
     {
         if(!Cache::has('fetchData')) {
             $fetchUrlRepository = new FetchUrlRepository();
@@ -37,7 +38,7 @@ class TodoController extends Controller
      * Toplam iş yükünü hesaplayalım.
      * @return mixed
      */
-    public function calculateTotalWorkload()
+    public function calculateTotalWorkload(): int
     {
         foreach (self::fetchData() as $k => $v)
         {
@@ -56,7 +57,7 @@ class TodoController extends Controller
      *
      * @return array
      */
-    public function calculateWorkMetrics()
+    public function calculateWorkMetrics(): array
     {
         $employeesRepository = new EmployeesRepository();
 
@@ -90,7 +91,7 @@ class TodoController extends Controller
      *
      * @return View|\Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function renderView(EmployeesRepository $employeesRepository)
+    public function renderView(EmployeesRepository $employeesRepository): View
     {
         return view('todo', [
             'allEmployees' => $employeesRepository->fetchEmployees(),
