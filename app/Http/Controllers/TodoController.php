@@ -85,12 +85,13 @@ class TodoController extends Controller
     /**
      * View results.
      * Sonuçları görüntüle.
+     *
+     * @param EmployeesRepository $employeesRepository
+     *
      * @return View|\Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function renderView()
+    public function renderView(EmployeesRepository $employeesRepository)
     {
-        $employeesRepository = new EmployeesRepository();
-
         return view('todo', [
             'allEmployees' => $employeesRepository->fetchEmployees(),
             'metrics'      => $this->calculateWorkMetrics(),
