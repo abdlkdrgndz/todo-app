@@ -30,7 +30,7 @@ class EmployeesModel extends Model
      * @var string[]
      */
     protected $casts = [
-        'id_employe' => 'int',
+        'id_employee' => 'int',
         'name'       => 'string',
         'unit'       => 'int',
     ];
